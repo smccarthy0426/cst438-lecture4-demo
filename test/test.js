@@ -65,3 +65,17 @@ describe("Getty api call", function() {
     
     
 }); 
+
+describe("Getty api call", function() {
+    
+    it("should return without errors", function(done) {
+        
+        getty.makeApiRequest(function(error, imgURI) {
+            expect(imgURI.split("://")[0]).to.equal('http'); 
+            done(); 
+        });
+    }); 
+    
+    
+    
+});
